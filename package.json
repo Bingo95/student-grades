@@ -7,7 +7,6 @@
     "build:test": "cross-env UMI_ENV=test max build",
     "build:pre": "cross-env UMI_ENV=pre max build",
     "analyze": "cross-env ANALYZE=1 max build",
-    "postinstall": "update-browserslist-db",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
