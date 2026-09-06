@@ -1,0 +1,75 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "set PORT=8098 && cross-env UMI_ENV=dev max dev",
+    "start:test": "cross-env UMI_ENV=test MOCK=none max dev",
+    "build": "cross-env UMI_ENV=prod max build",
+    "build:test": "cross-env UMI_ENV=test max build",
+    "build:pre": "cross-env UMI_ENV=pre max build",
+    "analyze": "cross-env ANALYZE=1 max build",
+    "postinstall": "update-browserslist-db",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "@antv/f2": "^5.14.0",
+    "@esotericsoftware/spine-pixi-v8": "^4.2.96",
+    "@pixi/react": "^8.0.5",
+    "@umijs/plugin-antd-mobile": "^1.2.0",
+    "add": "^2.0.9",
+    "antd-mobile": "^5.41.1",
+    "antd-mobile-icons": "^0.3.0",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.15",
+    "howler": "^2.2.4",
+    "lodash": "^4.17.21",
+    "lottie-react": "^2.4.1",
+    "numeral": "^2.0.6",
+    "pixi.js": "^8.14.3",
+    "query-string": "^9.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "svgaplayerweb": "^2.3.2",
+    "vconsole": "^3.14.6"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^24.0.13",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/react-helmet": "^6.1.11",
+    "@umijs/fabric": "^4.0.1",
+    "@umijs/max": "^4.3.24",
+    "ahooks": "^3.9.6",
+    "autoprefixer": "^10.4.22",
+    "cross-env": "^10.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "postcss": "^8.5.6",
+    "postcss-px-to-viewport-8-plugin": "^1.2.5",
+    "prettier": "^2.0.1",
+    "qrcode.react": "^4.2.0",
+    "stylelint": "^13.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "checkFiles": [
+    "src/**/*.js*",
+    "src/**/*.ts*",
+    "src/**/*.less",
+    "config/**/*.js*",
+    "scripts/**/*.js"
+  ]
+}

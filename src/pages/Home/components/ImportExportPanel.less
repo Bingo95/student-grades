@@ -1,0 +1,78 @@
+/* 导入导出页（尺寸按 750 设计稿书写，postcss 自动转 vw） */
+@sr-text: #1c1c1e;
+@sr-sub: #8e8e93;
+
+.sr-io {
+  &__desc {
+    margin-bottom: 24px;
+    font-size: 26px;
+    line-height: 1.6;
+    color: @sr-sub;
+  }
+
+  &__stats {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__stat {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    background: #f2f2f7;
+    border-radius: 20px;
+
+    b {
+      font-size: 40px;
+      font-weight: 600;
+      color: #007aff;
+    }
+
+    span {
+      font-size: 24px;
+      color: @sr-sub;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__file {
+    margin-top: 20px;
+    font-size: 24px;
+    color: @sr-sub;
+  }
+
+  /* 隐藏原生 file input，由按钮触发 */
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.sr-btn {
+  height: 88px;
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 999px;
+
+  &--plain {
+    color: @sr-text;
+    background: #f2f2f7;
+    border: none;
+  }
+
+  &--danger {
+    color: #ff3b30;
+    background: rgba(255, 59, 48, 0.1);
+    border: none;
+  }
+}

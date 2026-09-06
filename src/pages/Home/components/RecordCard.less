@@ -1,0 +1,120 @@
+/* 考试记录卡片（尺寸按 750 设计稿书写，postcss 自动转 vw） */
+@sr-text: #1c1c1e;
+@sr-sub: #8e8e93;
+@sr-line: rgba(60, 60, 67, 0.1);
+
+.sr-record {
+  padding: 28px;
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-weight: 600;
+    color: @sr-text;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__date {
+    margin-top: 8px;
+    font-size: 24px;
+    color: @sr-sub;
+  }
+
+  &__score {
+    flex: none;
+    text-align: right;
+  }
+
+  &__total {
+    font-size: 52px;
+    font-weight: 700;
+    color: #007aff;
+    line-height: 1;
+  }
+
+  &__unit {
+    margin-left: 4px;
+    font-size: 24px;
+    color: @sr-sub;
+  }
+
+  &__delta {
+    margin-top: 8px;
+    min-height: 28px;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 24px;
+    color: @sr-sub;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid @sr-line;
+  }
+
+  &__action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    font-size: 28px;
+    color: @sr-text;
+    background: #f2f2f7;
+    border-radius: 16px;
+    &--edit {
+      color: #2072ec;
+      background: rgba(48, 62, 255, 0.08);
+    }
+    &--danger {
+      color: #ff3b30;
+      background: rgba(255, 59, 48, 0.08);
+    }
+  }
+}
+
+.sr-subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.sr-subject {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 14px;
+  font-size: 24px;
+  background: #fff;
+  border-radius: 14px;
+
+  &__name {
+    color: @sr-sub;
+  }
+
+  &__score {
+    font-size: 28px;
+    font-weight: 600;
+    color: @sr-text;
+  }
+}

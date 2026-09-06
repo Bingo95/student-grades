@@ -1,0 +1,252 @@
+/* 分数录入表单（尺寸按 750 设计稿书写，postcss 自动转 vw） */
+@sr-text: #1c1c1e;
+@sr-sub: #8e8e93;
+@sr-line: rgba(60, 60, 67, 0.1);
+@sr-blue: #007aff;
+@sr-bg: #f2f2f7;
+
+.sr-form {
+  padding: 8px 32px 24px;
+
+  &__footer {
+    margin-top: 48px;
+    padding-bottom: 24px;
+  }
+}
+
+.sr-sheet {
+  &__head {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid @sr-line;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: @sr-text;
+  }
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    font-size: 28px;
+    color: @sr-blue;
+  }
+}
+
+.sr-group {
+  margin-top: 28px;
+
+  &__title {
+    margin: 0 0 16px 8px;
+    font-size: 26px;
+    color: @sr-sub;
+  }
+
+  &__card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 4px 28px;
+  }
+}
+
+.sr-field {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  min-height: 96px;
+  border-bottom: 1px solid @sr-line;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__label {
+    flex: none;
+    font-size: 30px;
+    color: @sr-text;
+
+    i {
+      margin-left: 6px;
+      color: #ff3b30;
+      font-style: normal;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  &__control--input {
+    display: block;
+    width: 320px;
+    text-align: right;
+  }
+
+  &__value {
+    font-size: 30px;
+    color: @sr-text;
+  }
+
+  &__placeholder {
+    font-size: 30px;
+    color: #c7c7cc;
+  }
+
+  &__arrow {
+    width: 14px;
+    height: 14px;
+    margin-left: 16px;
+    border-top: 2px solid #c7c7cc;
+    border-right: 2px solid #c7c7cc;
+    transform: rotate(45deg);
+  }
+}
+
+.sr-chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.sr-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  font-size: 26px;
+  color: @sr-text;
+  background: #ffffff;
+  border: 1px solid @sr-line;
+  border-radius: 999px;
+
+  &--active {
+    color: #ffffff;
+    background: @sr-blue;
+    border-color: @sr-blue;
+  }
+
+  &__text {
+    line-height: 1;
+  }
+
+  &__del {
+    margin-left: 10px;
+    font-size: 30px;
+    line-height: 1;
+  }
+}
+
+.sr-score {
+  display: flex;
+  align-items: center;
+  height: 96px;
+  border-bottom: 1px solid @sr-line;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: 30px;
+    color: @sr-text;
+  }
+
+  &__input {
+    width: 200px;
+    input {
+      text-align: right;
+    }
+  }
+
+  &__full {
+    width: 130px;
+    font-size: 26px;
+    color: @sr-sub;
+    text-align: right;
+  }
+
+  &__full-edit {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__del {
+    width: 56px;
+    font-size: 40px;
+    color: #c7c7cc;
+    text-align: center;
+    margin-top: -8px;
+  }
+
+  &--add {
+    gap: 20px;
+  }
+}
+
+.sr-add-btn {
+  flex: none;
+  padding: 12px 28px;
+  font-size: 26px;
+  color: #ffffff;
+  background: @sr-blue;
+  border-radius: 999px;
+}
+
+.sr-dot {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.sr-input {
+  text-align: right !important;
+  --font-size: 30px;
+  --placeholder-color: #c7c7cc;
+  input {
+    text-align: right;
+  }
+  &--number {
+    text-align: right;
+  }
+
+  &--mini {
+    display: inline-flex;
+    width: 90px;
+    text-align: right;
+    --font-size: 26px;
+  }
+
+  &--left {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+.sr-btn {
+  height: 88px;
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 999px;
+
+  &--plain {
+    color: @sr-text;
+    background: @sr-bg;
+    border: none;
+  }
+}

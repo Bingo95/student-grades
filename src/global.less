@@ -1,0 +1,170 @@
+@import '~@/themes/default';
+
+html,
+body,
+#root {
+  outline: 0;
+  min-height: 100%;
+  background: #f8f8f8;
+}
+
+* {
+  line-height: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  &::-webkit-scrollbar {
+    display: none; /* 隐藏滚动条 */
+  }
+}
+
+/* 去掉列表前的标识，li 会继承 */
+ol,
+ul {
+  list-style: none;
+  margin-bottom: 0 !important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: normal;
+  vertical-align: baseline;
+}
+
+input {
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button,
+button::after {
+  border: none;
+}
+
+// stra组件半星层级问题
+.adm-rate-star-half {
+  z-index: 1;
+}
+
+.btn_primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, @color-primary 0%, @color-secondary 100%);
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  &:hover,
+  &:active {
+    background-color: @color-primary-hover;
+  }
+
+  &:active {
+    background-color: @color-primary-active;
+  }
+
+  &.disabled {
+    background-color: @color-disabled;
+    color: #ffffff;
+  }
+}
+
+.btn-secondary {
+  background-color: @color-secondary;
+  color: #ffffff;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: @color-primary;
+  }
+
+  &.disabled {
+    background-color: @color-disabled;
+    color: #ffffff;
+  }
+}
