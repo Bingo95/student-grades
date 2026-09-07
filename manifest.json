@@ -8,13 +8,13 @@
   "background_color": "#f4f5f9",
   "icons": [
     {
-      "src": "/student-grades/icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/student-grades/icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
