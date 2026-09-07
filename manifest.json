@@ -1,0 +1,23 @@
+{
+  "name": "考试成绩记录",
+  "short_name": "成绩记录",
+  "description": "记录每次考试的总分、排名与各科成绩，自动统计趋势与弱势学科",
+  "display": "standalone",
+  "start_url": "./?utm_source=homescreen",
+  "theme_color": "#007aff",
+  "background_color": "#f4f5f9",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
